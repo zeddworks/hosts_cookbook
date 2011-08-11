@@ -17,7 +17,7 @@
 # limitations under the License.
 #
 
-hosts = Chef::EncryptedDataBagItem.load("env", "hosts")
+hosts = Chef::EncryptedDataBagItem.load("env", "#{node[:brand]}_hosts")
 
 template "/etc/hosts" do
     source "hosts.erb"
